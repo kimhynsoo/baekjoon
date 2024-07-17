@@ -2,16 +2,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num=sc.nextInt();
-        int numarr[] = new int[num];
-        int total=0;
-        String[] str = sc.next().split("");
-        for (int i=0; i<num; i++){
-            numarr[i] = Integer.parseInt(str[i]);
-            total+=numarr[i];
+        int count=1;
+        int max_count=0;
+        int a=0,b=0;
+        for (int i=0; i<9; i++){
+            a= sc.nextInt();
+            if(a>b){
+                b=a;
+                max_count=count;
+            }
+            count++;
+
 
         }
-        System.out.print(total);
+        System.out.println(b);
+        System.out.println(max_count);
 
     }
 }
